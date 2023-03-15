@@ -35,8 +35,9 @@
             <![endif]-->
 
             <!-- ========== Google Fonts ========== -->
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+            <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet"> -->
+           
     </head>
     <body class="antialiased">
         <!-- Preloader Start -->
