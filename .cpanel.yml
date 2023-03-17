@@ -1,4 +1,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sekola53/public_html/
-    - /bin/cp -R images $DEPLOYPATH
+    - composer install
+    - /bin/cp -R * $DEPLOYPATH
