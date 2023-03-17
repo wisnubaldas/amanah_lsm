@@ -6,15 +6,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner text-light carousel-zoom">
             <div class="item active">
-                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/2440x1578.png);"></div>
+                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/anak-smk.jpg);"></div>
                 <div class="box-table shadow dark">
                     <div class="box-cell">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="content">
-                                        <h3 data-animation="animated slideInLeft">Reach you career</h3>
-                                        <h1 data-animation="animated slideInUp">Learn from best online training course</h1>
+                                        <h3 data-animation="animated slideInLeft">Selamat Datang</h3>
+                                        <h1 data-animation="animated slideInUp">SMK AL-AMANAH</h1>
                                         <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Learn more</a>
                                         <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#">View Courses</a>
                                     </div>
@@ -25,17 +25,17 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/2440x1578.png);"></div>
+                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/agustusan.jpg);"></div>
                 <div class="box-table shadow dark">
                     <div class="box-cell">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="content">
-                                        <h3 data-animation="animated slideInLeft">We're glade to see you</h3>
-                                        <h1 data-animation="animated slideInUp">explore our brilliant graduates</h1>
-                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Learn more</a>
-                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#">View Courses</a>
+                                        <h3 data-animation="animated slideInLeft">Dirgahayu RI</h3>
+                                        <h1 data-animation="animated slideInUp">Meriahkan HUT RI Bersama Kami....!!</h1>
+                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Round Down Acara</a>
+                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#">Pendaftaran</a>
                                     </div>
                                 </div>
                             </div>
@@ -44,17 +44,15 @@
                 </div>
             </div>
             <div class="item">
-                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/2440x1578.png);"></div>
+                <div class="slider-thumb bg-fixed" style="background-image: url(assets/img/imlek.jpg);"></div>
                 <div class="box-table shadow dark">
                     <div class="box-cell">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="content">
-                                        <h3 data-animation="animated slideInLeft">The goal of education</h3>
-                                        <h1 data-animation="animated slideInUp">Join the bigest comunity of eduka</h1>
-                                        <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Learn more</a>
-                                        <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="#">View Courses</a>
+                                        <h3 data-animation="animated slideInLeft">Selamat Tahun Baru</h3>
+                                        <h1 data-animation="animated slideInUp">Selamat tahun baru china 50000 bagi yang merayakan</h1>
                                     </div>
                                 </div>
                             </div>
