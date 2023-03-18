@@ -9,8 +9,9 @@
         <!-- Preloader Ends -->
         @include('front.layout.header-top')
         @include('front.layout.header-menu')
-        @include('front.layout.banner')
+        
         @yield('content')
+        @include('front.layout.footer')
         @include('front.layout.js')
     </body>
 </html>

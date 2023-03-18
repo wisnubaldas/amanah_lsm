@@ -37,7 +37,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="/">
-                    <img src="assets/img/logo.png" class="logo" alt="Logo">
+                    <img src="/assets/img/al-amanah-logo-2.png" class="logo" alt="Logo">
                 </a>
             </div>
             <!-- End Header Navigation -->
@@ -51,14 +51,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Profile</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Sejarah</a></li>
-                            <li><a href="#">Timeline Sekolah</a></li>
-                            <li><a href="#">Visi Misi</a></li>
+                            <li><a href="{{route('sejarah')}}">Sejarah</a></li>
+                            <li><a href="{{route('timeline')}}">Timeline Sekolah</a></li>
+                            <li><a href="{{route('visimisi')}}">Visi Misi</a></li>
                             <li><a href="#">Program Keahlian</a></li>
                             <li><a href="#">Tugas dan Fungsi</a></li>
-                            <li><a href="#">Tugas dan Fungsi</a></li>
                             <li><a href="#">Profile Pemimpin</a></li>
-                            <li><a href="#">Peta Sekolah</a></li>
                             <li><a href="#">Peta Sekolah</a></li>
                             <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/Chome/profil/B43878AF-23AE-4D54-A011-D34AE7F9A7B0" target="_blank">Kami di Kemendikbud</a></li>
                             <li><a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20614427" target="_blank">Refrensi Data</a></li>

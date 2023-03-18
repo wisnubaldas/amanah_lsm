@@ -8,7 +8,7 @@
 <title>Sekolah Al-Amanah</title>
 
 <!-- ========== Favicon Icon ========== -->
-<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
 
 <!-- ========== Start Stylesheet ========== -->
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,7 +20,7 @@
 <link href="/assets/css/owl.theme.default.min.css" rel="stylesheet" />
 <link href="/assets/css/animate.css" rel="stylesheet" />
 <link href="/assets/css/bootsnav.css" rel="stylesheet" />
-<link href="style.css" rel="stylesheet">
+<link href="/style.css" rel="stylesheet">
 <link href="/assets/css/responsive.css" rel="stylesheet" />
 <!-- ========== End Stylesheet ========== -->
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FrontController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('front.welcome');
+});
+
+Route::prefix(env('FRONT_PREFIX'))->group(function () {
+    Route::controller(FrontController::class)->group(function () {
+        Route::get('sejarah', 'sejarah')->name('sejarah');
+        Route::get('timeline', 'timeline')->name('timeline');
+        Route::get('visimisi', 'visimisi')->name('visimisi');
+    });
 });
 
 Auth::routes();
