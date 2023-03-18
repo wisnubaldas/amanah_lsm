@@ -42,61 +42,183 @@ class FrontController extends Controller
     public function program_keahlian()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
-        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->title = 'Program Keahlian SMK';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-4.jpg';
         $breadcrumb->link = [
             ['profile','#', 'fas fa-home', null],
-            ['timeline sekolah','#',null,'active']
+            ['Program Keahlian','#',null,'active']
         ];
-        return view('front.pages.timeline',compact('breadcrumb'));
+        return view('front.pages.program-keahlian',compact('breadcrumb'));
     }
     public function tugas_fungsi()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
-        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->title = 'Tugas dan Fungsi';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-2.jpg';
         $breadcrumb->link = [
             ['profile','#', 'fas fa-home', null],
-            ['timeline sekolah','#',null,'active']
+            ['tugas dan fungsi','#',null,'active']
         ];
         return view('front.pages.timeline',compact('breadcrumb'));
     }
     public function profil_pemimpin()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
-        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->title = 'Profil Pemimpin';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-3.png';
         $breadcrumb->link = [
             ['profile','#', 'fas fa-home', null],
-            ['timeline sekolah','#',null,'active']
+            ['Profil pemimpin','#',null,'active']
         ];
         return view('front.pages.timeline',compact('breadcrumb'));
     }
     public function peta_sekolah()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->title = 'Denah Sekolah';
         $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
         $breadcrumb->link = [
             ['profile','#', 'fas fa-home', null],
-            ['timeline sekolah','#',null,'active']
+            ['peta sekolah','#',null,'active']
         ];
         return view('front.pages.timeline',compact('breadcrumb'));
     }
+    // halaman
     public function program_kerja()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->title = 'Program Kerja';
         $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
         $breadcrumb->link = [
-            ['profile','#', 'fas fa-home', null],
-            ['timeline sekolah','#',null,'active']
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['program kerja','#',null,'active']
         ];
         return view('front.pages.timeline',compact('breadcrumb'));
     }
     public function hubungan_industri()
     {
         $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Hubungan Industri';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['hubungan industri','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function program_inovasi()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Inovasi Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['Teaching Factory dan Program Inovasi','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function unit_produksi()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Unit Produksi';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['Program Bussiness Center (Unit Produksi)','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function pengembangan_sekolah()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Pengembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['Program Pengembangan Sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function kewirausahaan()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Kewirausahaan';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Program sekolah','#',null,null],
+            ['Program Kewirausahaan Sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function jaringan()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Jaringan Komputer';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Konsentrasi Keahlian','#',null,null],
+            ['System Informasi Jaringan dan Aplikasi','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function rpl()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'RPL';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Konsentrasi Keahlian','#',null,null],
+            ['Rekayasa Perangkat Lunak','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function multimedia()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Multimedia';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Konsentrasi Keahlian','#',null,null],
+            ['Multimedia and Broadcasting','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function otomotif()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Otomotif';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Konsentrasi Keahlian','#',null,null],
+            ['Otomotif','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function agenda_kegiatan()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Agenda Kegiatan';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['halaman','#', 'fas fa-home', null],
+            ['Kegiatan Sekolah','#',null,null],
+            ['Agenda Kegiatan','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function bursa_kerja()
+    {
+        $breadcrumb = new \stdClass();
         $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
         $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
         $breadcrumb->link = [
@@ -105,6 +227,194 @@ class FrontController extends Controller
         ];
         return view('front.pages.timeline',compact('breadcrumb'));
     }
+    public function siswa_baru()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function ekskul()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function galeri_foto()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function galeri_video()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function hasil_karya()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function ebook()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function video_pembelajaran()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function informasi_pendidik()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function tenaga_kependidikan()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function prestasi_guru()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function prestasi_siswa()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function informasi_siswa()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function alumni()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function infrastruktur()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function sarana_belajar()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function sarana_olahraga()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    public function sarana_ibadah()
+    {
+        $breadcrumb = new \stdClass();
+        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->link = [
+            ['profile','#', 'fas fa-home', null],
+            ['timeline sekolah','#',null,'active']
+        ];
+        return view('front.pages.timeline',compact('breadcrumb'));
+    }
+    
     public function kontak()
     {
         $breadcrumb = new \stdClass();

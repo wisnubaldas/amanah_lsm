@@ -54,10 +54,10 @@
                             <li><a href="{{route('sejarah')}}">Sejarah</a></li>
                             <li><a href="{{route('timeline')}}">Timeline Sekolah</a></li>
                             <li><a href="{{route('visimisi')}}">Visi Misi</a></li>
-                            <li><a href="#">Program Keahlian</a></li>
-                            <li><a href="#">Tugas dan Fungsi</a></li>
-                            <li><a href="#">Profile Pemimpin</a></li>
-                            <li><a href="#">Peta Sekolah</a></li>
+                            <li><a href="{{route('program-keahlian')}}">Program Keahlian</a></li>
+                            <li><a href="{{route('tugas-fungsi')}}">Tugas dan Fungsi</a></li>
+                            <li><a href="{{route('profil-pemimpin')}}">Profile Pemimpin</a></li>
+                            <li><a href="{{route('peta-sekolah')}}">Peta Sekolah</a></li>
                             <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/Chome/profil/B43878AF-23AE-4D54-A011-D34AE7F9A7B0" target="_blank">Kami di Kemendikbud</a></li>
                             <li><a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20614427" target="_blank">Refrensi Data</a></li>
                             
@@ -72,12 +72,12 @@
                                         <h6 class="title">Program Sekolah</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#">Program Kerja</a></li>
-                                                <li><a href="#">Hubungan Industri</a></li>
-                                                <li><a href="#">Teaching Factory dan Program Inovasi</a></li>
-                                                <li><a href="#">Program Bussiness Center (Unit Produksi)</a></li>
-                                                <li><a href="#">Program Pengembangan Sekolah</a></li>
-                                                <li><a href="#">Program Kewirausahaan</a></li>
+                                                <li><a href="{{route('program-kerja')}}">Program Kerja</a></li>
+                                                <li><a href="{{route('hubungan-industri')}}">Hubungan Industri</a></li>
+                                                <li><a href="{{route('program-inovasi')}}">Teaching Factory dan Program Inovasi</a></li>
+                                                <li><a href="{{route('unit-produksi')}}">Program Bussiness Center (Unit Produksi)</a></li>
+                                                <li><a href="{{route('pengembangan-sekolah')}}">Program Pengembangan Sekolah</a></li>
+                                                <li><a href="{{route('kewirausahaan')}}">Program Kewirausahaan</a></li>
                                             </ul>
                                         </div>
                                     </div><!-- end col-3 -->
@@ -85,12 +85,10 @@
                                         <h6 class="title">Konsentrasi Keahlian</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#">Teknik Elektronika Industri</a></li>
-                                                <li><a href="#">Teknik Elektronika Komunikasi</a></li>
-                                                <li><a href="#">System Informasi Jaringan dan Aplikasi</a></li>
-                                                <li><a href="#">Rekayasa Perangkat Lunak</a></li>
-                                                <li><a href="#">Multimedia and Broadcasting</a></li>
-                                                <li><a href="#">Otomotif</a></li>
+                                                <li><a href="{{route('jaringan')}}">System Informasi Jaringan dan Aplikasi</a></li>
+                                                <li><a href="{{route('rpl')}}">Rekayasa Perangkat Lunak</a></li>
+                                                <li><a href="{{route('multimedia')}}">Multimedia and Broadcasting</a></li>
+                                                <li><a href="{{route('otomotif')}}">Otomotif</a></li>
                                             </ul>
                                         </div>
                                     </div><!-- end col-3 -->
@@ -98,10 +96,10 @@
                                         <h6 class="title">Kegiatan Sekolah</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#">Agenda Kegiatan</a></li>
-                                                <li><a href="#">Bursa Kerja</a></li>
-                                                <li><a href="#">Penerimaan Peserta Didik Baru</a></li>
-                                                <li><a href="#">Ekstrakulikuler</a></li>
+                                                <li><a href="{{route('agenda-kegiatan')}}">Agenda Kegiatan</a></li>
+                                                <li><a href="{{route('bursa-kerja')}}">Bursa Kerja</a></li>
+                                                <li><a href="{{route('siswa-baru')}}">Penerimaan Peserta Didik Baru</a></li>
+                                                <li><a href="{{route('ekskul')}}">Ekstrakulikuler</a></li>
                                             </ul>
                                         </div>
                                     </div><!-- end col-3 -->
@@ -109,11 +107,11 @@
                                         <h6 class="title">Galeri</h6>
                                         <div class="content">
                                             <ul class="menu-col">
-                                                <li><a href="#">Galeri Foto</a></li>
-                                                <li><a href="#l">Galeri Video</a></li>
-                                                <li><a href="#">Hasil Karya Siswa</a></li>
-                                                <li><a href="#">E-Book</a></li>
-                                                <li><a href="#">Video Pembelajaran</a></li>
+                                                <li><a href="{{route('galeri-foto')}}">Galeri Foto</a></li>
+                                                <li><a href="{{route('galeri-video')}}">Galeri Video</a></li>
+                                                <li><a href="{{route('hasil-karya')}}">Hasil Karya Siswa</a></li>
+                                                <li><a href="{{route('ebook')}}">E-Book</a></li>
+                                                <li><a href="{{route('video-pembelajaran')}}">Video Pembelajaran</a></li>
                                             </ul>
                                         </div>
                                     </div><!-- end col-3 -->
@@ -124,37 +122,30 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >GTK</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Informasi Pendidik</a></li>
-                            <li><a href="#">Tenaga Kependidikan</a></li>
-                            <li><a href="#">Prestasi Guru</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Teachers</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Advisor</a></li>
-                            <li><a href="#">Advisor Details</a></li>
+                            <li><a href="{{route('informasi-pendidik')}}">Informasi Pendidik</a></li>
+                            <li><a href="{{route('tenaga-kependidikan')}}">Tenaga Kependidikan</a></li>
+                            <li><a href="{{route('prestasi-guru')}}">Prestasi Guru</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Siswa</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Prestasi Siswa</a></li>
-                            <li><a href="#">Informasi Siswa</a></li>
-                            <li><a href="#">Alumni</a></li>
+                            <li><a href="{{route('prestasi-siswa')}}">Prestasi Siswa</a></li>
+                            <li><a href="{{route('informasi-siswa')}}">Informasi Siswa</a></li>
+                            <li><a href="{{route('alumni')}}">Alumni</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sarana dan Prasarana</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Infrastruktur Sekolah</a></li>
-                            <li><a href="#">Sarana Pembelajaran</a></li>
-                            <li><a href="#">Sarana Olahraga</a></li>
-                            <li><a href="#">Sarana Ibadah</a></li>
+                            <li><a href="{{route('infrastruktur')}}">Infrastruktur Sekolah</a></li>
+                            <li><a href="{{route('sarana-belajar')}}">Sarana Pembelajaran</a></li>
+                            <li><a href="{{route('sarana-olahraga')}}">Sarana Olahraga</a></li>
+                            <li><a href="{{route('sarana-ibadah')}}">Sarana Ibadah</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Kontak</a>
+                        <a href="{{route('kontak')}}">Kontak</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
