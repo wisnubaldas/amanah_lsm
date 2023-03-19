@@ -30,19 +30,16 @@
                         <h4>Links</h4>
                         <ul>
                             <li>
-                                <a href="#">Courses</a>
+                                <a href="#">Informasi Pendidik</a>
                             </li>
                             <li>
-                                <a href="#">Event</a>
+                                <a href="#">Tenaga Kependidikan</a>
                             </li>
                             <li>
-                                <a href="#">Gallery</a>
+                                <a href="#">Prestasi Guru</a>
                             </li>
                             <li>
                                 <a href="#">Faqs</a>
-                            </li>
-                            <li>
-                                <a href="#">Teachers</a>
                             </li>
                             <li>
                                 <a href="#">Contact</a>

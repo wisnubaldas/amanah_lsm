@@ -12,49 +12,52 @@ use App\Http\Controllers\FrontController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+function encoding($text)
+{
+    return hash('sha256', $text);
+}
 Route::get('/', function () {
     return view('front.welcome');
 });
 
     Route::controller(FrontController::class)->prefix(env('FRONT_PREFIX'))->group(function () {
-        Route::get(env('FRONT_PREFIX'), 'sejarah')->name('sejarah');
-        Route::get('timeline', 'timeline')->name('timeline');
-        Route::get('visimisi', 'visimisi')->name('visimisi');
-        Route::get('program-keahlian', 'program_keahlian')->name('program-keahlian');
-        Route::get('tugas-fungsi', 'tugas_fungsi')->name('tugas-fungsi');
-        Route::get('profil-pemimpin', 'profil_pemimpin')->name('profil-pemimpin');
-        Route::get('peta-sekolah', 'peta_sekolah')->name('peta-sekolah');
-        Route::get('program-kerja', 'program_kerja')->name('program-kerja');
-        Route::get('hubungan-industri', 'hubungan_industri')->name('hubungan-industri');
-        Route::get('program-inovasi', 'program_inovasi')->name('program-inovasi');
-        Route::get('unit-produksi', 'unit_produksi')->name('unit-produksi');
-        Route::get('pengembangan-sekolah', 'pengembangan_sekolah')->name('pengembangan-sekolah');
-        Route::get('kewirausahaan', 'kewirausahaan')->name('kewirausahaan');
-        Route::get('jaringan', 'jaringan')->name('jaringan');
-        Route::get('rpl', 'rpl')->name('rpl');
-        Route::get('multimedia', 'multimedia')->name('multimedia');
-        Route::get('otomotif', 'otomotif')->name('otomotif');
-        Route::get('agenda-kegiatan', 'agenda_kegiatan')->name('agenda-kegiatan');
-        Route::get('bursa-kerja', 'bursa_kerja')->name('bursa-kerja');
-        Route::get('siswa-baru', 'siswa_baru')->name('siswa-baru');
-        Route::get('ekskul', 'ekskul')->name('ekskul');
-        Route::get('galeri-foto', 'galeri_foto')->name('galeri-foto');
-        Route::get('galeri-video', 'galeri_video')->name('galeri-video');
-        Route::get('hasil-karya', 'hasil_karya')->name('hasil-karya');
-        Route::get('ebook', 'ebook')->name('ebook');
-        Route::get('video-pembelajaran', 'video_pembelajaran')->name('video-pembelajaran');
-        Route::get('informasi-pendidik', 'informasi_pendidik')->name('informasi-pendidik');
-        Route::get('tenaga-kependidikan', 'tenaga_kependidikan')->name('tenaga-kependidikan');
-        Route::get('prestasi-guru', 'prestasi_guru')->name('prestasi-guru');
-        Route::get('prestasi-siswa', 'prestasi_siswa')->name('prestasi-siswa');
-        Route::get('informasi-siswa', 'informasi_siswa')->name('informasi-siswa');
-        Route::get('alumni', 'alumni')->name('alumni');
-        Route::get('infrastruktur', 'infrastruktur')->name('infrastruktur');
-        Route::get('sarana-belajar', 'sarana_belajar')->name('sarana-belajar');
-        Route::get('sarana-olahraga', 'sarana_olahraga')->name('sarana-olahraga');
-        Route::get('sarana-ibadah', 'sarana_ibadah')->name('sarana-ibadah');
-        Route::get('kontak', 'kontak')->name('kontak');
+        Route::get(encoding('sejarah'), 'sejarah')->name('sejarah');
+        Route::get(encoding('timeline'), 'timeline')->name('timeline');
+        Route::get(encoding('visimisi'), 'visimisi')->name('visimisi');
+        Route::get(encoding('program-keahlian'), 'program_keahlian')->name('program-keahlian');
+        Route::get(encoding('tugas-fungsi'), 'tugas_fungsi')->name('tugas-fungsi');
+        Route::get(encoding('profil-pemimpin'), 'profil_pemimpin')->name('profil-pemimpin');
+        Route::get(encoding('peta-sekolah'), 'peta_sekolah')->name('peta-sekolah');
+        Route::get(encoding('program-kerja'), 'program_kerja')->name('program-kerja');
+        Route::get(encoding('hubungan-industri'), 'hubungan_industri')->name('hubungan-industri');
+        Route::get(encoding('program-inovasi'), 'program_inovasi')->name('program-inovasi');
+        Route::get(encoding('unit-produksi'), 'unit_produksi')->name('unit-produksi');
+        Route::get(encoding('pengembangan-sekolah'), 'pengembangan_sekolah')->name('pengembangan-sekolah');
+        Route::get(encoding('kewirausahaan'), 'kewirausahaan')->name('kewirausahaan');
+        Route::get(encoding('jaringan'), 'jaringan')->name('jaringan');
+        Route::get(encoding('rpl'), 'rpl')->name('rpl');
+        Route::get(encoding('multimedia'), 'multimedia')->name('multimedia');
+        Route::get(encoding('otomotif'), 'otomotif')->name('otomotif');
+        Route::get(encoding('agenda-kegiatan'), 'agenda_kegiatan')->name('agenda-kegiatan');
+        Route::get(encoding('bursa-kerja'), 'bursa_kerja')->name('bursa-kerja');
+        Route::get(encoding('siswa-baru'), 'siswa_baru')->name('siswa-baru');
+        Route::get(encoding('ekskul'), 'ekskul')->name('ekskul');
+        Route::get(encoding('galeri-foto'), 'galeri_foto')->name('galeri-foto');
+        Route::get(encoding('galeri-video'), 'galeri_video')->name('galeri-video');
+        Route::get(encoding('hasil-karya'), 'hasil_karya')->name('hasil-karya');
+        Route::get(encoding('ebook'), 'ebook')->name('ebook');
+        Route::get(encoding('video-pembelajaran'), 'video_pembelajaran')->name('video-pembelajaran');
+        Route::get(encoding('informasi-pendidik'), 'informasi_pendidik')->name('informasi-pendidik');
+        Route::get(encoding('tenaga-kependidikan'), 'tenaga_kependidikan')->name('tenaga-kependidikan');
+        Route::get(encoding('prestasi-guru'), 'prestasi_guru')->name('prestasi-guru');
+        Route::get(encoding('prestasi-siswa'), 'prestasi_siswa')->name('prestasi-siswa');
+        Route::get(encoding('informasi-siswa'), 'informasi_siswa')->name('informasi-siswa');
+        Route::get(encoding('alumni'), 'alumni')->name('alumni');
+        Route::get(encoding('infrastruktur'), 'infrastruktur')->name('infrastruktur');
+        Route::get(encoding('sarana-belajar'), 'sarana_belajar')->name('sarana-belajar');
+        Route::get(encoding('sarana-olahraga'), 'sarana_olahraga')->name('sarana-olahraga');
+        Route::get(encoding('sarana-ibadah'), 'sarana_ibadah')->name('sarana-ibadah');
+        Route::get(encoding('kontak'), 'kontak')->name('kontak');
     });
 
 Auth::routes();
