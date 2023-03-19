@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('front.welcome');
 });
 
-Route::prefix(env('FRONT_PREFIX'))->group(function () {
-    Route::controller(FrontController::class)->group(function () {
-        Route::get('sejarah', 'sejarah')->name('sejarah');
+    Route::controller(FrontController::class)->prefix(env('FRONT_PREFIX'))->group(function () {
+        Route::get(env('FRONT_PREFIX'), 'sejarah')->name('sejarah');
         Route::get('timeline', 'timeline')->name('timeline');
         Route::get('visimisi', 'visimisi')->name('visimisi');
         Route::get('program-keahlian', 'program_keahlian')->name('program-keahlian');
@@ -57,7 +56,6 @@ Route::prefix(env('FRONT_PREFIX'))->group(function () {
         Route::get('sarana-ibadah', 'sarana_ibadah')->name('sarana-ibadah');
         Route::get('kontak', 'kontak')->name('kontak');
     });
-});
 
 Auth::routes();
 
