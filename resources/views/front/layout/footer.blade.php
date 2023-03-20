@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-6">
-                        <p>&copy; Copyright 2019. All Rights Reserved by <a href="#">validthemes</a></p>
+                        <p>&copy; Copyright 2019. All Rights Reserved by <a href="#">wisnubaldas</a></p>
                     </div>
                     <div class="col-md-6 text-right link">
                         <ul>
