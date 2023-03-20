@@ -7,13 +7,16 @@
                 <div class="info box">
                     <ul>
                         <li>
-                            <span><i class="fas fa-map"></i> Alamat</span>Jalan Raya Pasarkemis Tangerang 123456
-                        </li>
-                        <li>
-                            <span><i class="fas fa-envelope-open"></i> Email</span>admin@sekolah-alamanah.sch.id
-                        </li>
-                        <li>
-                            <span><i class="fas fa-phone"></i> Contact</span>+123 456 7890
+                            <span >
+                                Headline SMK al Amanah
+                            </span>
+                                <div class='marquee'>
+                                    Ikutilah Acara Lomba Balap Gundu <a href="{{ url('/home') }}">
+                                    <i style="color:#e9f5f9;">Daftar disini..!!!</i></a>
+                                    &emsp;
+                                    Ikutilah Acara Lomba Balap Karung <a href="{{ url('/home') }}">
+                                    <i style="color:#e9f5f9;">Daftar disini..!!!</i></a>
+                                </div>
                         </li>
                     </ul>
                 </div>

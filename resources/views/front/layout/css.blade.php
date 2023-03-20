@@ -26,6 +26,13 @@
 <link href="/assets/css/bootsnav.css" rel="stylesheet" />
 <link href="/style.css" rel="stylesheet">
 <link href="/assets/css/responsive.css" rel="stylesheet" />
+<style>
+    .marquee {
+    width: 40em; /* the plugin works for responsive layouts so width is not necessary */
+    overflow: hidden;
+    color: #ffffff;
+}
+</style>
 <!-- ========== End Stylesheet ========== -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
