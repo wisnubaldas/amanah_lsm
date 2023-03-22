@@ -1,2 +1,2 @@
 <?php
-info_php();
+php_info();
