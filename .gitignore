@@ -23,3 +23,4 @@ vendor.zip
 queue.pid
 .user.ini
 php.ini
+cron.log
