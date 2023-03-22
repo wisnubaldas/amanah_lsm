@@ -29,7 +29,7 @@ class Kernel extends ConsoleKernel
                 $number = exec($command);
                 file_put_contents($path . '/queue.pid', $number);
             }
-        })->name('monitor_queue_listener')->everyFiveMinutes();
+        })->name('monitor_queue_listener')->everyMinute();
     }
 
     /**
