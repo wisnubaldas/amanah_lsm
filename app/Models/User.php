@@ -55,8 +55,8 @@ class User extends Authenticatable implements MustVerifyEmail
         // Chain fluent methods for configuration options
     }
 
-    // public function sendEmailVerificationNotification()
-    // {
-    //         $this->notify(new VerifyEmailQueued);
-    // }
+    public function sendEmailVerificationNotification()
+    {
+            $this->notify(new VerifyEmailQueued);
+    }
 }
