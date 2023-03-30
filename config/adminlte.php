@@ -312,35 +312,33 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
+            'text'        => 'SMK AL-AMANAH',
+            'url'         => '/',
+            'icon'        => 'fas fa-home',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
+        ],                
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+            'text'        => 'Dashboard',
+            'url'         => '/home',
+            'icon'        => 'fas fa-chart-pie',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
+        ],        
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'Role & Permission',
-            'url'  => '/laratrust',
-            'icon' => 'fas fa-fw fa-lock',
+            'text'        => 'Galery Foto',
+            'url'         => '/galery-foto',
+            'icon'        => 'fas fa-eye',
+            // 'label'       => 4,
+            // 'label_color' => 'success',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Master Config',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Create Group',
+                    'url'  => '/master/media-group',
                 ],
                 [
                     'text'    => 'level_one',
@@ -372,6 +370,23 @@ return [
                 ],
             ],
         ],
+        ['header' => 'account_settings'],
+        [
+            'text' => 'profile',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Role & Permission',
+            'url'  => '/laratrust',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        
         ['header' => 'labels'],
         [
             'text'       => 'important',
@@ -425,6 +440,21 @@ return [
     */
 
     'plugins' => [
+        'BootstrapSelect' => [
+            'active' => false,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/bootstrap-select-1.13.14/dist/js/bootstrap-select.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'vendor/bootstrap-select-1.13.14/dist/css/bootstrap-select.min.css',
+                ],
+            ],
+        ],
         'Datatables' => [
             'active' => false,
             'files' => [

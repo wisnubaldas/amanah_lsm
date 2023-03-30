@@ -65,4 +65,11 @@ Auth::routes(['verify' => true]);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/galery-foto', [App\Http\Controllers\GaleryFotoController::class, 'index'])->name('galery-foto');
+
+});
+Route::prefix('master')->group(function () {
+    Route::group(['middleware' => ['auth', 'verified']], function () {
+        Route::get('/media-group', [App\Http\Controllers\GroupMediaController::class, 'index'])->name('group-media');    
+    });
 });

@@ -15,6 +15,7 @@
         "laravel/ui": "^4.2",
         "maatwebsite/excel": "^3.1",
         "santigarcor/laratrust": "^7.2",
+        "snapappointments/bootstrap-select": "^1.13",
         "spatie/image": "^2.2",
         "spatie/laravel-activitylog": "^4.7",
         "spatie/laravel-blade-javascript": "^2.7",

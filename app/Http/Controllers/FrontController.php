@@ -255,14 +255,14 @@ class FrontController extends Controller
     public function galeri_foto()
     {
         $breadcrumb = new \stdClass();
-        $breadcrumb->title = 'Sejarah Perkembangan Sekolah';
-        $breadcrumb->image = '/assets/img/breadcrumb/bg-sejarah.jpg';
+        $breadcrumb->title = 'Galery Foto ';
+        $breadcrumb->image = '/assets/img/breadcrumb/bg-6.jpg';
         $breadcrumb->link = [
             ['halaman','#', 'fas fa-home', null],
             ['Galeri','#',null,null],
             ['Koleksi Foto','#',null,'active']
         ];
-        return view('front.pages.timeline',compact('breadcrumb'));
+        return view('front.pages.galeri-foto',compact('breadcrumb'));
     }
     public function galeri_video()
     {
