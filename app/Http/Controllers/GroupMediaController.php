@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\GroupMedia;
 use App\Http\Requests\StoreGroupMediaRequest;
 use App\Http\Requests\UpdateGroupMediaRequest;
-
+use App\DataTables\GroupMediaDataTable;
 class GroupMediaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(GroupMediaDataTable $dataTable)
     {
-        //
+        return $dataTable->render('back.group-media');
+        
     }
 
     /**
@@ -29,7 +30,10 @@ class GroupMediaController extends Controller
      */
     public function store(StoreGroupMediaRequest $request)
     {
-        //
+        $validated = $request->validated();
+        $validated = $request->safe()->only(['name']);
+        GroupMedia::create($validated);
+        return redirect('/master/media-group');
     }
 
     /**
@@ -43,9 +47,10 @@ class GroupMediaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(GroupMedia $groupMedia)
+    public function edit(GroupMedia $groupMedia,$id)
     {
-        //
+        $media = $groupMedia->find($id);
+        return view('back.group-media',compact('media'));
     }
 
     /**
@@ -53,14 +58,18 @@ class GroupMediaController extends Controller
      */
     public function update(UpdateGroupMediaRequest $request, GroupMedia $groupMedia)
     {
-        //
+        $data = $groupMedia->find($request->id);
+        $data->name = $request->name;
+        $data->save();
+        return redirect()->route('group-media');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GroupMedia $groupMedia)
+    public function destroy(GroupMedia $groupMedia,$id)
     {
-        //
+        $groupMedia->find($id)->delete();
+        return back();
     }
 }

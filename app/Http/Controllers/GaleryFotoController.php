@@ -43,9 +43,10 @@ class GaleryFotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(GaleryFoto $galeryFoto)
+    public function edit(GaleryFoto $galeryFoto,$id)
     {
-        //
+        $data = $galeryFoto->find($id);
+        dd($data);
     }
 
     /**
@@ -59,8 +60,8 @@ class GaleryFotoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GaleryFoto $galeryFoto)
+    public function destroy(GaleryFoto $galeryFoto,$id)
     {
-        //
+        
     }
 }

@@ -70,6 +70,12 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 });
 Route::prefix('master')->group(function () {
     Route::group(['middleware' => ['auth', 'verified']], function () {
-        Route::get('/media-group', [App\Http\Controllers\GroupMediaController::class, 'index'])->name('group-media');    
+        Route::prefix('media-group')->group(function(){
+            Route::get('/', [App\Http\Controllers\GroupMediaController::class, 'index'])->name('group-media');    
+            Route::post('/', [App\Http\Controllers\GroupMediaController::class, 'store'])->name('group-media.post');    
+            Route::get('/delete/{id}', [App\Http\Controllers\GroupMediaController::class, 'destroy'])->name('group-media.delete');    
+            Route::get('/edit/{id}', [App\Http\Controllers\GroupMediaController::class, 'edit'])->name('group-media.edit');    
+            Route::post('/update', [App\Http\Controllers\GroupMediaController::class, 'update'])->name('group-media.update');    
+        });
     });
 });
