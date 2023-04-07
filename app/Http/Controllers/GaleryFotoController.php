@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\GaleryFoto;
+use App\Models\GroupMedia;
 use App\Http\Requests\StoreGaleryFotoRequest;
 use App\Http\Requests\UpdateGaleryFotoRequest;
-
+use App\DataTables\GaleryFotoDataTable;
 class GaleryFotoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(GaleryFotoDataTable $datatable)
     {
-        return view('back.galery-foto');
+        $group = GroupMedia::all();
+        return $datatable->render('back.galery-foto',compact('group'));
+        // return view('back.galery-foto',compact('group'));
     }
 
     /**
@@ -21,7 +24,7 @@ class GaleryFotoController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -29,7 +32,21 @@ class GaleryFotoController extends Controller
      */
     public function store(StoreGaleryFotoRequest $request)
     {
-        //
+        // $validated = $request->validated()->safe();
+        if (isset($request->validator) && $request->validator->fails()) {
+            $err = $request->validator->errors()->messages();
+            return redirect()->back()->withErrors($err)->withInput();
+        }
+        $image_path = $request->file('link_img')->store('image', 'public');
+        $data = GaleryFoto::create([
+            'link_img' => $image_path,
+            'link_tumb' => $image_path,
+            'name'=>$request->name,
+            'group_media_id'=>$request->group_media_id,
+        ]);
+
+        session()->flash('success', 'Image Upload successfully');
+        return back();
     }
 
     /**
