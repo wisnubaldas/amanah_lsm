@@ -79,6 +79,9 @@ Route::prefix('master')->group(function () {
             Route::get('/edit/{id}', [App\Http\Controllers\GroupMediaController::class, 'edit'])->name('group-media.edit');    
             Route::post('/update', [App\Http\Controllers\GroupMediaController::class, 'update'])->name('group-media.update');    
         });
+        Route::prefix('banner')->group(function () {
+            Route::get('/', [App\Http\Controllers\BannerController::class, 'index'])->name('banner'); 
+        });
         
     });
 });
