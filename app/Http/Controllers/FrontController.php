@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\GaleryFoto;
+use App\Models\GroupMedia;
 class FrontController extends Controller
 {
     public function sejarah()
@@ -262,7 +263,9 @@ class FrontController extends Controller
             ['Galeri','#',null,null],
             ['Koleksi Foto','#',null,'active']
         ];
-        return view('front.pages.galeri-foto',compact('breadcrumb'));
+        $data['foto'] = GaleryFoto::all();
+        $data['group'] = GroupMedia::all();
+        return view('front.pages.galeri-foto',compact('breadcrumb','data'));
     }
     public function galeri_video()
     {

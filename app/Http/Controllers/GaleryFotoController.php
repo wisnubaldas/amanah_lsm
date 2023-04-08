@@ -7,6 +7,8 @@ use App\Models\GroupMedia;
 use App\Http\Requests\StoreGaleryFotoRequest;
 use App\Http\Requests\UpdateGaleryFotoRequest;
 use App\DataTables\GaleryFotoDataTable;
+use Image;
+use Illuminate\Support\Str;
 class GaleryFotoController extends Controller
 {
     /**
@@ -16,7 +18,6 @@ class GaleryFotoController extends Controller
     {
         $group = GroupMedia::all();
         return $datatable->render('back.galery-foto',compact('group'));
-        // return view('back.galery-foto',compact('group'));
     }
 
     /**
@@ -37,10 +38,15 @@ class GaleryFotoController extends Controller
             $err = $request->validator->errors()->messages();
             return redirect()->back()->withErrors($err)->withInput();
         }
-        $image_path = $request->file('link_img')->store('image', 'public');
-        $data = GaleryFoto::create([
+        $image_name = Str::uuid(). '.' . $request->file('link_img')->getClientOriginalExtension();
+        $image_path = '/assets/img/galeri/foto/' . $image_name;
+        $image_tumb = '/assets/img/galeri/foto/tumb/' . $image_name;
+        Image::make($request->file('link_img'))->fit(800)->save(public_path($image_path));
+        Image::make($request->file('link_img'))->fit(400)->save(public_path($image_tumb));
+
+        GaleryFoto::create([
             'link_img' => $image_path,
-            'link_tumb' => $image_path,
+            'link_tumb' => $image_tumb,
             'name'=>$request->name,
             'group_media_id'=>$request->group_media_id,
         ]);
