@@ -65,8 +65,10 @@ Auth::routes(['verify' => true]);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/galery-foto', [App\Http\Controllers\GaleryFotoController::class, 'index'])->name('galery-foto');
-
+    Route::prefix('galery-foto')->group(function(){
+        Route::get('/', [App\Http\Controllers\GaleryFotoController::class, 'index'])->name('galery-foto');
+        Route::post('/', [App\Http\Controllers\GaleryFotoController::class, 'store'])->name('galery-foto.create');
+    });
 });
 Route::prefix('master')->group(function () {
     Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -77,5 +79,6 @@ Route::prefix('master')->group(function () {
             Route::get('/edit/{id}', [App\Http\Controllers\GroupMediaController::class, 'edit'])->name('group-media.edit');    
             Route::post('/update', [App\Http\Controllers\GroupMediaController::class, 'update'])->name('group-media.update');    
         });
+        
     });
 });
