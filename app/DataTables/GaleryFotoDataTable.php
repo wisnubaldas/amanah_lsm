@@ -22,7 +22,15 @@ class GaleryFotoDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'galeryfoto.action')
+            ->addColumn('action', function ($row)
+                {
+                    $del = route('galery-foto.destroy',$row->id);
+                    return <<<END
+                                <div class="btn-group btn-sm" role="group" aria-label="Basic example">
+                                    <a href="{$del}" class="btn btn-outline-danger btn-sm">Delete</a>
+                                </div>
+                            END;
+                })
             ->setRowId('id');
     }
 

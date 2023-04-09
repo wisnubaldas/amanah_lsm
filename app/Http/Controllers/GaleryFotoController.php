@@ -85,6 +85,7 @@ class GaleryFotoController extends Controller
      */
     public function destroy(GaleryFoto $galeryFoto,$id)
     {
-        
+        $galeryFoto->find($id)->delete();
+        return back();
     }
 }

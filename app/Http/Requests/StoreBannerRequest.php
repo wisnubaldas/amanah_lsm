@@ -11,7 +11,7 @@ class StoreBannerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreBannerRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'title'=>'required',
+            'content'=>'required',
+            'link'=>'required',
+            'image'=>'required|image|mimes:jpg,png,jpeg,gif,svg',
         ];
     }
 }

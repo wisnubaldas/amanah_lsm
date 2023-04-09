@@ -26,4 +26,5 @@
         delayBetweenCycles: 5000,
         handleHover:true
     });
+    
 </script>

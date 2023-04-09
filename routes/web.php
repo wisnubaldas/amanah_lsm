@@ -17,7 +17,8 @@ function encoding($text)
     return hash('sha256', $text);
 }
 Route::get('/', function () {
-    return view('front.welcome');
+    $banner = App\Models\Banner::all();
+    return view('front.welcome',compact('banner'));
 });
 
     Route::controller(FrontController::class)->prefix(env('FRONT_PREFIX'))->group(function () {
@@ -68,6 +69,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::prefix('galery-foto')->group(function(){
         Route::get('/', [App\Http\Controllers\GaleryFotoController::class, 'index'])->name('galery-foto');
         Route::post('/', [App\Http\Controllers\GaleryFotoController::class, 'store'])->name('galery-foto.create');
+        Route::get('/delete/{id}', [App\Http\Controllers\GaleryFotoController::class, 'destroy'])->name('galery-foto.destroy');
     });
 });
 Route::prefix('master')->group(function () {
@@ -81,6 +83,7 @@ Route::prefix('master')->group(function () {
         });
         Route::prefix('banner')->group(function () {
             Route::get('/', [App\Http\Controllers\BannerController::class, 'index'])->name('banner'); 
+            Route::post('/', [App\Http\Controllers\BannerController::class, 'store'])->name('banner.store'); 
         });
         
     });
